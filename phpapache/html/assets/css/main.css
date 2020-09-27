@@ -2038,14 +2038,18 @@ input[type="radio"]+label:before {
     display: block;
 }
 
-.image.left,
+.image.left {
+    width: 50%;
+    height: 100%;
+}
+
 .image.right {
-    max-width: 50%;
+    width: 50%;
 }
 
 .image.left img,
 .image.right img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .image.left {
