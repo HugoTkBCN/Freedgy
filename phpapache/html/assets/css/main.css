@@ -2039,12 +2039,13 @@ input[type="radio"]+label:before {
 }
 
 .image.left {
-    max-width: 50%;
+    width: 50%;
     min-width: 100px;
+    min-height: 100px;
 }
 
 .image.right {
-    max-width: 50%;
+    width: 50%;
 }
 
 .image.left img,
