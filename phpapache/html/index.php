@@ -23,10 +23,7 @@
 		</nav>
 		<a href="index.php"><img id="logo" src="assets/logo.png"></img></a>
 		<ul class="icons">
-			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 			<li><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 			<li><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span></a></li>
 		</ul>
