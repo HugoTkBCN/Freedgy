@@ -2052,12 +2052,14 @@ input[type="radio"]+label:before {
     float: left;
     padding: 0 1.5em 1em 0;
     top: 0.25em;
+    height: 300px;
 }
 
 .image.right {
     float: right;
     padding: 0 0 1em 1.5em;
     top: 0.25em;
+    height: 300px;
 }
 
 .image.fit {
