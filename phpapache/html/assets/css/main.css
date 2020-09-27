@@ -2038,13 +2038,10 @@ input[type="radio"]+label:before {
     display: block;
 }
 
-.image.left {
+.image.left,
+.image.right {
     min-width: 100px;
     min-height: 100px;
-}
-
-.image.right {
-    width: 50%;
 }
 
 .image.left img,
