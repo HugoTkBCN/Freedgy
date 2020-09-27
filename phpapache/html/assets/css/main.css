@@ -2627,6 +2627,7 @@ body {
     z-index: 10001;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
     text-align: center;
+    min-height: 100px;
 }
 
 #header nav {
