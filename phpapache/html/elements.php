@@ -18,11 +18,20 @@
 <body class="subpage">
 
 	<!-- Header -->
+	<!-- Header -->
 	<header id="header">
 		<nav class="left">
 			<a href="#menu"><span>Menu</span></a>
 		</nav>
-		<img id="logo" href="index.php" src="assets/logo.png"></img>
+		<a href="index.php"><img id="logo" src="assets/logo.png"></img></a>
+		<ul class="icons">
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+			<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+			<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+		</ul>
 	</header>
 
 	<!-- Menu -->

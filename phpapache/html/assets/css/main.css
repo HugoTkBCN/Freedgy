@@ -2126,6 +2126,10 @@ ul.icons {
     cursor: default;
     list-style: none;
     padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0 1em 0 0;
 }
 
 ul.icons li {
@@ -2610,9 +2614,8 @@ body {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center;
-    background: #fff;
     cursor: default;
-    height: 6em;
+    height: 15%;
     left: 0;
     line-height: 6em;
     position: fixed;
@@ -2621,16 +2624,6 @@ body {
     z-index: 10001;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
     text-align: center;
-}
-
-#header .logo {
-    color: #f6755e;
-    font-family: "Pacifico", cursive;
-    font-size: 2.5em;
-    letter-spacing: 2px;
-    margin-top: -5px;
-    text-decoration: none;
-    display: inline-block;
 }
 
 #header nav {
@@ -2692,10 +2685,6 @@ body {
     #header {
         height: 44px;
         line-height: 44px;
-    }
-    #header .logo {
-        font-size: 1.25em;
-        text-align: center;
     }
     #header nav a[href="#menu"] {
         font-size: 1.5em;
@@ -3044,7 +3033,7 @@ body.is-loading #banner .content {
 /* Footer */
 
 #footer {
-    padding: 6em 0 4em 0;
+    padding: 3em 0 2em 0;
     background: #25a2c3;
     text-align: center;
     color: #c8e7f0;

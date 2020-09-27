@@ -18,7 +18,6 @@
 <body class="subpage">
 
 	<!-- Header -->
-	<!-- Header -->
 	<header id="header">
 		<nav class="left">
 			<a href="#menu"><span>Menu</span></a>
@@ -29,35 +28,66 @@
 			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 			<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-			<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-			<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+			<li><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+			<li><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span></a></li>
 		</ul>
 	</header>
+
 	<!-- Menu -->
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="contact_us.php">Contact us</a></li>
-			<li><a href="about_us.php">About us</a></li>
-		</ul>
-		<ul class="actions vertical">
-			<li><a href="#" class="button fit">Login</a></li>
 		</ul>
 	</nav>
 
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
-			<header class="align-center">
-				<h1>Generic Page</h1>
-				<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-			</header>
-			<div class="image fit">
-				<img src="images/pic05.jpg" alt="" />
-			</div>
-			<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-			<p> Aenean iaculis, neque sed pretium egestas, nunc lacus tempus enim, nec tincidunt urna massa a libero. Aenean mattis bibendum est, a pharetra elit. Morbi commodo lectus quis blandit mattis. Cras pharetra quam quis tincidunt tempus. Donec a sem magna. Nullam purus purus, fermentum id lorem sit amet, porta elementum neque. Proin vulputate metus ac faucibus luctus.</p>
-			<p>Ut congue purus sed elit consectetur tempus. Duis convallis, quam quis pellentesque vestibulum, tellus arcu hendrerit ante, sed dictum felis nisl vitae magna. Integer et sapien a erat molestie tempor. Cras est odio, suscipit id porttitor id, mollis et ligula. Curabitur molestie mi molestie accumsan faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porta malesuada pellentesque. Morbi imperdiet dictum velit, eu volutpat sem posuere non. Fusce ullamcorper gravida velit, sed sollicitudin libero iaculis id. Ut eu neque non odio fringilla faucibus nec quis neque. Quisque et nisi fermentum, tincidunt libero a, condimentum ligula. Quisque ultrices blandit lacinia. Nulla velit lorem, placerat nec eros ut, fermentum pharetra dolor. Maecenas arcu ipsum, mattis et suscipit sed, convallis nec lectus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; </p>
+			<h1>Contact us</h1>
+
+			<form method="post" action="#">
+				<div class="row uniform">
+					<div class="6u 12u$(xsmall)">
+						<input type="text" name="name" id="name" value="" placeholder="Name" />
+					</div>
+					<div class="6u$ 12u$(xsmall)">
+						<input type="email" name="email" id="email" value="" placeholder="Email" />
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<div class="select-wrapper">
+							<select name="category" id="category">
+								<option value="">- Category -</option>
+								<option value="1">Manufacturing</option>
+								<option value="1">Shipping</option>
+								<option value="1">Administration</option>
+								<option value="1">Human Resources</option>
+							</select>
+						</div>
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+					</div>
+					<!-- Break -->
+					<div class="6u 12u$(small)">
+						<input type="checkbox" id="copy" name="copy">
+						<label for="copy">Email me a copy of this message</label>
+					</div>
+					<div class="6u$ 12u$(small)">
+						<input type="checkbox" id="human" name="human">
+						<label for="human">I am not a robot</label>
+					</div>
+					<!-- Break -->
+					<div class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+							<li><input type="reset" value="Reset" class="alt" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
 		</div>
 	</section>
 
