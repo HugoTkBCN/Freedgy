@@ -2123,6 +2123,11 @@ ul.alt li:first-child {
     padding-top: 0;
 }
 
+li.icons {
+    height: 200%;
+    width: 200%;
+}
+
 ul.icons {
     cursor: default;
     list-style: none;
@@ -2132,7 +2137,7 @@ ul.icons {
     top: 0;
     padding: 0 1em 0 0;
     height: 100%;
-    width: 20%;
+    width: 100%;
 }
 
 ul.icons li {
