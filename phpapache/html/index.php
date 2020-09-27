@@ -66,7 +66,7 @@
 	<!-- Two -->
 	<section id="two" class="wrapper style1 special">
 		<div class="inner">
-			<h2>Who we are ?</h2>
+			<h2>Who are we?</h2>
 			<figure>
 				<blockquote>
 					Freedgy is a non profitable enterprise run by 5 Epitech students from Barcelona and Berlin that will spread a movement of solidarity.
