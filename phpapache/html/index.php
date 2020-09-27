@@ -10,9 +10,9 @@
 	<title>Freedgy</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" type="image/ico" href="assets/logo.png" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="icon" type="image/ico" href="//0.0.0.0/assets/logo.png" />
+	<link href="//0.0.0.0/assets/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="//0.0.0.0/assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 		<nav class="left">
 			<a href="#menu"><span>Menu</span></a>
 		</nav>
-		<img id="logo" href="index.php" src="assets/logo.png"></img>
+		<img id="logo" href="index.php" src="//0.0.0.0/assets/logo.png"></img>
 	</header>
 
 	<!-- Menu -->
@@ -157,11 +157,11 @@
 	</footer>
 
 	<!-- Scriptshtml-->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script type="text/javascript" src="//0.0.0.0/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="//0.0.0.0/assets/js/jquery.scrolly.min.js"></script>
+	<script type="text/javascript" src="//0.0.0.0/assets/js/skel.min.js"></script>
+	<script type="text/javascript" src="//0.0.0.0/assets/js/util.js"></script>
+	<script type="text/javascript" src="//0.0.0.0/assets/js/main.js"></script>
 
 </body>
 

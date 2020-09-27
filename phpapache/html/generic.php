@@ -11,8 +11,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/ico" href="assets/logo.png" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/style.css" />
+	<link href="//0.0.0.0/assets/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="//0.0.0.0/assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="subpage">
