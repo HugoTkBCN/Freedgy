@@ -2039,7 +2039,6 @@ input[type="radio"]+label:before {
 }
 
 .image.left {
-    width: 50%;
     min-width: 100px;
     min-height: 100px;
 }
