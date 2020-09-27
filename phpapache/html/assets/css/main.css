@@ -2038,6 +2038,11 @@ input[type="radio"]+label:before {
     display: block;
 }
 
+.image.left,
+.image.right {
+    max-width: 40%;
+}
+
 .image.left {
     float: left;
     padding: 0 1.5em 1em 0;
