@@ -2,7 +2,8 @@ FROM php:7.1-apache
 
 RUN apt-get update && \
     docker-php-ext-install pdo_mysql mysqli mbstring
-ADD ssl.conf /etc/apache2/sites-available/ssl.conf                                 
+ADD ssl.conf /etc/apache2/sites-available/ssl.conf
+ADD freedgy.conf /etc/apache2/sites-available/freedgy.conf                                 
 ADD entrypoint.sh /opt/entrypoint.sh                                               
 
 RUN chmod a+x /opt/entrypoint.sh                                                   
