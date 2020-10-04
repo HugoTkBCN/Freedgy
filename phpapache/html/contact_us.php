@@ -49,6 +49,24 @@ if (function_exists('mail')) {
 	<link rel="icon" type="image/ico" href="assets/logo.png" />
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			// https://dashboard.emailjs.com/admin/integration
+			emailjs.init('user_2StMasAbAPzMasQrAyivL');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				// generate a five digit number for the contact_number variable
+				this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('gmail', 'template_pe8bjh9', this);
+			});
+		}
+	</script>
 </head>
 
 <body class="subpage">
@@ -77,13 +95,14 @@ if (function_exists('mail')) {
 		<div class="inner">
 			<h1>Contact us</h1>
 
-			<form method="post" action="">
+			<form id="contact-form">
+				<input type="hidden" name="contact_number">
 				<div class="row uniform">
 					<div class="6u 12u$(xsmall)">
-						<input type="text" name="name" id="name" value="" placeholder="Name" />
+						<input type="text" name="user_name" id="name" value="" placeholder="Name" />
 					</div>
 					<div class="6u$ 12u$(xsmall)">
-						<input type="email" name="email" id="email" value="" placeholder="Email" />
+						<input type="email" name="user_email" id="email" value="" placeholder="Email" />
 					</div>
 					<!-- Break -->
 					<div class="12u$">
@@ -92,7 +111,7 @@ if (function_exists('mail')) {
 					<!-- Break -->
 					<div class="12u$">
 						<ul class="actions">
-							<li><input type="submit" value="Submit" name="submit" /></li>
+							<li><input type="submit" value="Send" name="submit" /></li>
 						</ul>
 					</div>
 				</div>
