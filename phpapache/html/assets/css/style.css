@@ -7,3 +7,21 @@
     height: 100%;
     weight: 100%;
 }
+
+#newsletter-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup,
+#join,
+#name_newsletter,
+#email_newsletter {
+    text-align: center;
+    padding: 5px;
+}
+
+#join {
+    padding: 5% 0% 0% 0%;
+}

@@ -13,7 +13,33 @@
 	<link rel="icon" type="image/ico" href="assets/logo.png" />
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="test.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			// https://dashboard.emailjs.com/admin/integration
+			emailjs.init('user_2StMasAbAPzMasQrAyivL');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				if (document.getElementById("name").value.length > 0 && document.getElementById("email").value.length > 0) {
+					// generate a five digit number for the contact_number variable
+					this.contact_number.value = Math.random() * 100000 | 0;
+					// these IDs from the previous steps
+					emailjs.sendForm('gmail', 'template_uht7a3p', this);
+					alert("You are now suscribed to our newsletter");
+					this.reset();
+				} else {
+					alert("Please fill all the form !");
+				}
+			});
+		}
+	</script>
 </head>
+
 <body>
 	<!-- Header -->
 	<header id="header">
@@ -43,6 +69,33 @@
 			</ul>
 		</div>
 	</section>
+	<div class="box">
+		<a class="button" href="#newsletter">Join Our NewsLetter</a>
+	</div>
+
+	<div id="newsletter" class="overlay">
+		<div class="popup">
+			<h2>Join our newsletter</h2>
+			<a class="close" href="#">&times;</a>
+			<div class="content">
+				<form id="newsletter-form">
+					<input type="hidden" name="contact_number">
+					<div id="name_newsletter" class="6u$ 12u$(xsmall)">
+						<input type="text" name="user_name" id="name" value="" placeholder="Name" />
+					</div>
+					<div id="email_newsletter" class="6u$ 12u$(xsmall)">
+						<input type="email" name="user_email" id="email" value="" placeholder="Email" />
+					</div>
+					<!-- Break -->
+					<div id="join" class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Join" name="submit" /></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<!-- One -->
 	<section id="one" class="wrapper">
@@ -125,7 +178,7 @@
 
 	<!-- Footer -->
 	<footer id="footer">
-	<div class="inner">
+		<div class="inner">
 			<h2>Contact us</h2>
 			<ul class="actions">
 				<li><span class="icon fa-phone"></span> +34 620 397 972</li>
