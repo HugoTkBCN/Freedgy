@@ -14,7 +14,6 @@
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
 	<!-- Header -->
 	<header id="header">

@@ -36,12 +36,36 @@
 		</ul>
 	</nav>
 
+	<?php
+	if (isset($_POST['submit']) && isset($_POST['human'])) {
+		$to = "contact@freedgy.com"; // this is your Email address
+		$from = $_POST['email']; // this is the sender's Email address
+		$name = $_POST['name'];
+		$subject = "Form submission";
+		$subject2 = "Copy of your form submission";
+		$message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+		$message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+		$headers = "From:" . $from;
+		$headers2 = "From:" . $to;
+		if (mail($to, $subject, $message, $headers)) {
+			echo "True";
+		} else {
+			echo "False";
+		}
+		mail($from, $subject2, $message2, $headers2); // sends a copy of the message to the sender
+		echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+	} elseif (isset($_POST['submit'])) {
+		echo "check that you are not a robot";
+	}
+	?>
+
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
 			<h1>Contact us</h1>
 
-			<form method="post" action="#">
+			<form method="post" action="">
 				<div class="row uniform">
 					<div class="6u 12u$(xsmall)">
 						<input type="text" name="name" id="name" value="" placeholder="Name" />
@@ -51,25 +75,9 @@
 					</div>
 					<!-- Break -->
 					<div class="12u$">
-						<div class="select-wrapper">
-							<select name="category" id="category">
-								<option value="">- Category -</option>
-								<option value="1">Manufacturing</option>
-								<option value="1">Shipping</option>
-								<option value="1">Administration</option>
-								<option value="1">Human Resources</option>
-							</select>
-						</div>
-					</div>
-					<!-- Break -->
-					<div class="12u$">
 						<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 					</div>
 					<!-- Break -->
-					<div class="6u 12u$(small)">
-						<input type="checkbox" id="copy" name="copy">
-						<label for="copy">Email me a copy of this message</label>
-					</div>
 					<div class="6u$ 12u$(small)">
 						<input type="checkbox" id="human" name="human">
 						<label for="human">I am not a robot</label>
@@ -77,8 +85,7 @@
 					<!-- Break -->
 					<div class="12u$">
 						<ul class="actions">
-							<li><input type="submit" value="Send Message" /></li>
-							<li><input type="reset" value="Reset" class="alt" /></li>
+							<li><input type="submit" value="Submit" name="submit" /></li>
 						</ul>
 					</div>
 				</div>
@@ -88,7 +95,7 @@
 
 	<!-- Footer -->
 	<footer id="footer">
-	<div class="inner">
+		<div class="inner">
 			<h2>Contact us</h2>
 			<ul class="actions">
 				<li><span class="icon fa-phone"></span> +34 620 397 972</li>
@@ -97,16 +104,17 @@
 			</ul>
 			<ul class="icons">
 				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><<!-- Menu -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="index.php">Home</a></li>
-			<li><a href="contact_us.php">Contact us</a></li>
-			<li class="icons"><a href="#" class="icon fa-instagram"><span class="label">Instagram</span> Instagram</a></li>
-			<li class="icons"><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span> Linkedin</a></li>
-			<li class="icons"><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span> Medium</a></li>
-		</ul>
-	</nav>2020.
+				<li>
+					<<!-- Menu -->
+						<nav id="menu">
+							<ul class="links">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="contact_us.php">Contact us</a></li>
+								<li class="icons"><a href="#" class="icon fa-instagram"><span class="label">Instagram</span> Instagram</a></li>
+								<li class="icons"><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span> Linkedin</a></li>
+								<li class="icons"><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span> Medium</a></li>
+							</ul>
+						</nav>2020.
 		</div>
 	</footer>
 
