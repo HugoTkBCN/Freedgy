@@ -1,58 +1,36 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-    <title>Form submission</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"> </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
-    <script>
-        $(document).ready(function() {
-            $('#contact-form').submit(function(e) {
-                const form = document.querySelector('form[id = "contact - form"]');
-                const username = form.elements['user_name'].value;
-                const userMail = form.elements['user_email'].value;
-                const subject = form.elements['subject'].value;
-                const message = "email—" + userMail + ' < br > ' + "Summary: " + form.elements['message'].value;
-                e.preventDefault();
-                var data = {
-                    service_id: 'gmail',
-                    template_id: 'template_uffuhuf',
-                    user_id: 'user_2StMasAbAPzMasQrAyivL',
-                    template_params: {
-                        from_name: username,
-                        to_name: 'Freedgy',
-                        subject: subject,
-                        message_html: message
-                    }
-                };
-                $.ajax('https: //api.emailjs.com/api/v1.0/email/send', {
-                    type: 'POST',
-                    data: JSON.stringify(data),
-                    contentType: 'application / json'
-                }).done(function() {
-                    alert('Your mail is sent!');
-                }).fail(function(error) {
-                    alert('Oops…' + JSON.stringify(error));
-                })
-            })
-        })
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_2StMasAbAPzMasQrAyivL');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('gmail', 'template_uffuhuf', this);
+            });
+        }
     </script>
 </head>
-
 <body>
     <form id="contact-form">
         <input type="hidden" name="contact_number">
         <label>Name</label>
-        <input type="text" name="user_name" id="user_name">
+        <input type="text" name="user_name">
         <label>Email</label>
-        <input type="email" name="user_email" id="user_email">
-        <br>
-        <label>Subject</label>
-        <input type="text" name="subject" id="subject">
+        <input type="email" name="user_email">
         <label>Message</label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message"></textarea>
         <input type="submit" value="Send">
     </form>
-
 </body>
-
 </html>
