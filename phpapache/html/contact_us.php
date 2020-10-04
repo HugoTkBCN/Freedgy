@@ -24,10 +24,16 @@
 		window.onload = function() {
 			document.getElementById('contact-form').addEventListener('submit', function(event) {
 				event.preventDefault();
-				// generate a five digit number for the contact_number variable
-				this.contact_number.value = Math.random() * 100000 | 0;
-				// these IDs from the previous steps
-				emailjs.sendForm('gmail', 'template_pe8bjh9', this);
+				if (document.getElementById("name").value.length > 0 && document.getElementById("email").value.length > 0 && document.getElementById("message").value.length > 0) {
+					// generate a five digit number for the contact_number variable
+					this.contact_number.value = Math.random() * 100000 | 0;
+					// these IDs from the previous steps
+					emailjs.sendForm('gmail', 'template_pe8bjh9', this);
+					alert("Send Successfully !");
+					this.reset();
+				} else {
+					alert("Please fill all the form !");
+				}
 			});
 		}
 	</script>
@@ -58,7 +64,6 @@
 	<section id="main" class="wrapper">
 		<div class="inner">
 			<h1>Contact us</h1>
-
 			<form id="contact-form">
 				<input type="hidden" name="contact_number">
 				<div class="row uniform">
