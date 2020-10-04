@@ -30,7 +30,7 @@
 		<ul class="links">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="contact_us.php">Contact us</a></li>
-			<li class="icons"><a href="#" class="icon fa-instagram"><span class="label">Instagram</span> Instagram</a></li>
+			<li class="icons"><a href="https://www.instagram.com/freedgy.project/" class="icon fa-instagram"><span class="label">Instagram</span> Instagram</a></li>
 			<li class="icons"><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span> Linkedin</a></li>
 			<li class="icons"><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span> Medium</a></li>
 		</ul>
@@ -475,7 +475,7 @@ print 'It took ' + i + ' iterations to sort the deck.';
 				<li><span class="icon fa-map-marker"></span> <a href="https://goo.gl/maps/pd2bjZ2Q7GTqzHq47">Carrer de Joan Miró, 21, 08005 Barcelona, Spain</a></li>
 			</ul>
 			<ul class="icons">
-				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.instagram.com/freedgy.project/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 				<li><a href="https://www.linkedin.com/company/freedgy/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 				<li><a href="https://medium.com/@freedgy.project/freedgy-food-waste-and-food-precariousness-students-meet-the-challenge-1ee88a3f821e" class="icon fa-medium"><span class="label">Medium</span></a></li>
 			</ul>

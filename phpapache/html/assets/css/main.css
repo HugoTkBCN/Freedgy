@@ -2621,7 +2621,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 50;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.075);
     text-align: center;
     min-height: 100px;
@@ -2658,7 +2658,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     font-size: 2em;
     color: #dee1e3;
-    z-index: 5;
+    z-index: 10;
 }
 
 #header nav a[href="#menu"]:before {
@@ -2728,7 +2728,7 @@ body {
     top: 0;
     visibility: hidden;
     width: 20em;
-    z-index: 2;
+    z-index: 10;
 }
 
 #menu>ul {
