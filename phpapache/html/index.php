@@ -13,7 +13,6 @@
 	<link rel="icon" type="image/ico" href="assets/logo.png" />
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="test.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function() {
@@ -72,11 +71,10 @@
 	<div class="box">
 		<a class="button" href="#newsletter">Join Our NewsLetter</a>
 	</div>
-
 	<div id="newsletter" class="overlay">
 		<div class="popup">
 			<h2>Join our newsletter</h2>
-			<a class="close" href="#">&times;</a>
+			<a class="close" href="?home=1">&times;</a>
 			<div class="content">
 				<form id="newsletter-form">
 					<input type="hidden" name="contact_number">
@@ -202,7 +200,15 @@
 	<script type="text/javascript" src="assets/js/skel.min.js"></script>
 	<script type="text/javascript" src="assets/js/util.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
-
+	<script type="text/javascript">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const home = urlParams.get('home');
+		if (home != 1) {
+			document.getElementById("newsletter").style.visibility = "visible";
+			document.getElementById("newsletter").style.opacity = "1";
+		}
+	</script>
 </body>
 
 </html>
