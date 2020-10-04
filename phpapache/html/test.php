@@ -13,9 +13,9 @@
             const subject = form.elements['subject'].value;
             const message = "email—" + userMail + ' < br > '+"Summary: "+form.elements['message'].value; e.preventDefault();
             var data = {
-                service_id: 'mine_is_gmail',
-                template_id: 'template_id',
-                user_id: 'user_ID',
+                service_id: 'gmail',
+                template_id: 'template_ux3s3av',
+                user_id: 'user_2StMasAbAPzMasQrAyivL',
                 template_params: {
                     from_name: username,
                     to_name: 'Sucheta',
