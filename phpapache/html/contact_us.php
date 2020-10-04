@@ -6,42 +6,6 @@
 -->
 <html>
 
-<?php
-if (function_exists('mail')) {
-	echo 'mail() is available';
-} else {
-	echo 'mail() has been disabled';
-}
-?>
-<?php/*
-	if (isset($_POST['submit'])) {
-
-		$to = "contact@freedgy.com"; // this is your Email address
-		$from = $_POST['email']; // this is the sender's Email address
-		$name = $_POST['name'];
-		$subject = "Form submission";
-		$subject2 = "Copy of your form submission";
-		$message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-		$message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
-
-		$headers = "From:" . $from;
-		$headers2 = "From:" . $to;
-		$sendMail = mail($to, $subject, $message, $headers);
-		if ($sendMail) {
-			echo "Email Sent Successfully\n";
-		} else {
-			echo "Mail Failed\n";
-		}
-		$sendMail = mail($from, $subject2, $message2, $headers2); // sends a copy of the message to the sender
-		if ($sendMail) {
-			echo "Email Sent Successfully\n";
-		} else {
-			echo "Mail Failed\n";
-		}
-		echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-	}
-	*/?>
-
 <head>
 	<title>Freedgy</title>
 	<meta charset="utf-8" />
