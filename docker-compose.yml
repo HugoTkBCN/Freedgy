@@ -20,7 +20,6 @@ services:
     volumes:
       - ./certificates:/etc/apache2/ssl_keys
       - ./phpapache/html:/var/www/html
-      - ./phpapache/php.ini:/usr/local/etc/php/php.ini
     tty: true
     ports:
       - "80:80"

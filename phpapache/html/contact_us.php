@@ -6,6 +6,42 @@
 -->
 <html>
 
+<?php
+if (function_exists('mail')) {
+	echo 'mail() is available';
+} else {
+	echo 'mail() has been disabled';
+}
+?>
+<?php/*
+	if (isset($_POST['submit'])) {
+
+		$to = "contact@freedgy.com"; // this is your Email address
+		$from = $_POST['email']; // this is the sender's Email address
+		$name = $_POST['name'];
+		$subject = "Form submission";
+		$subject2 = "Copy of your form submission";
+		$message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
+		$message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+
+		$headers = "From:" . $from;
+		$headers2 = "From:" . $to;
+		$sendMail = mail($to, $subject, $message, $headers);
+		if ($sendMail) {
+			echo "Email Sent Successfully\n";
+		} else {
+			echo "Mail Failed\n";
+		}
+		$sendMail = mail($from, $subject2, $message2, $headers2); // sends a copy of the message to the sender
+		if ($sendMail) {
+			echo "Email Sent Successfully\n";
+		} else {
+			echo "Mail Failed\n";
+		}
+		echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
+	}
+	*/?>
+
 <head>
 	<title>Freedgy</title>
 	<meta charset="utf-8" />
@@ -36,30 +72,6 @@
 		</ul>
 	</nav>
 
-	<?php
-	if (isset($_POST['submit']) && isset($_POST['human'])) {
-		$to = "contact@freedgy.com"; // this is your Email address
-		$from = $_POST['email']; // this is the sender's Email address
-		$name = $_POST['name'];
-		$subject = "Form submission";
-		$subject2 = "Copy of your form submission";
-		$message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-		$message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
-
-		$headers = "From:" . $from;
-		$headers2 = "From:" . $to;
-		if (mail($to, $subject, $message, $headers)) {
-			echo "True";
-		} else {
-			echo "False";
-		}
-		mail($from, $subject2, $message2, $headers2); // sends a copy of the message to the sender
-		echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-	} elseif (isset($_POST['submit'])) {
-		echo "check that you are not a robot";
-	}
-	?>
-
 	<!-- Main -->
 	<section id="main" class="wrapper">
 		<div class="inner">
@@ -76,11 +88,6 @@
 					<!-- Break -->
 					<div class="12u$">
 						<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-					</div>
-					<!-- Break -->
-					<div class="6u$ 12u$(small)">
-						<input type="checkbox" id="human" name="human">
-						<label for="human">I am not a robot</label>
 					</div>
 					<!-- Break -->
 					<div class="12u$">
@@ -124,6 +131,46 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+
+<head>
+	<title>Form submission</title>
+</head>
+
+<body>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			// https://dashboard.emailjs.com/admin/integration
+			emailjs.init('user_2StMasAbAPzMasQrAyivL');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('contact-form').addEventListener('submit', function(event) {
+				event.preventDefault();
+				// generate a five digit number for the contact_number variable
+				this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('contact_service', 'contact_form', this);
+			});
+		}
+	</script>
+	<form id="contact-form">
+		<input type="hidden" name="contact_number">
+		<label>Name</label>
+		<input type="text" name="user_name">
+		<label>Email</label>
+		<input type="email" name="user_email">
+		<label>Message</label>
+		<textarea name="message"></textarea>
+		<input type="submit" value="Send">
+	</form>
 
 </body>
 
