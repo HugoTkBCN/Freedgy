@@ -29,7 +29,7 @@
 					this.contact_number.value = Math.random() * 100000 | 0;
 					// these IDs from the previous steps
 					emailjs.sendForm('Freedgy_Contact', 'template_pe8bjh9', this);
-					alert("Send Successfully !");
+					alert("Send Successful");
 					this.reset();
 				} else {
 					alert("Please fill all the form !");
