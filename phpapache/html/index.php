@@ -28,7 +28,7 @@
 					// generate a five digit number for the contact_number variable
 					this.contact_number.value = Math.random() * 100000 | 0;
 					// these IDs from the previous steps
-					emailjs.sendForm('gmail', 'template_uht7a3p', this);
+					emailjs.sendForm('Freedgy_Newsletter', 'template_uht7a3p', this);
 					alert("You are now suscribed to our newsletter");
 					this.reset();
 				} else {
