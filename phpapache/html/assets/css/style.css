@@ -14,6 +14,14 @@
     flex-direction: column;
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #0000;
+}
+
 .popup,
 #join,
 #name_newsletter,
@@ -27,15 +35,12 @@
 }
 
 .newletter_button {
-    width: 40%;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 35px;
-    border: 2px solid #fff;
+    padding: 35px 35px 0 0;
     border-radius: 20px/50px;
-    background-clip: padding-box;
-    text-align: center;
-    z-index: 1;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .overlay {
@@ -88,7 +93,7 @@
 }
 
 .popup .close:hover {
-    color: #06D85F;
+    color: #F3970E;
 }
 
 .popup .content {
