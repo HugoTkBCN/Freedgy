@@ -43,7 +43,7 @@
 	<!-- Header -->
 	<header id="header">
 		<nav class="left">
-			<a href="#menu"><span>Menu</span></a>
+			<a class="nav" href="#menu"><span>Menu</span></a>
 		</nav>
 		<a href="index.php"><img id="logo" src="assets/logo.png"></img></a>
 	</header>
@@ -97,9 +97,30 @@
 
 	<!-- One -->
 	<section id="one" class="trailer">
-		<iframe id="ytplayer" type="text/html" width="960" height="540"
-  		src="http://www.youtube.com/embed/Q8gARryJA9g?autoplay=1">
-		</iframe>
+		<div id="ytplayer"></div>
+
+		<script>
+		// Load the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// Replace the 'ytplayer' element with an <iframe> and
+		// YouTube player after the API code downloads.
+		var player;
+		function onYouTubePlayerAPIReady() {
+			player = new YT.Player('ytplayer', {
+			height: '540',
+			width: '960',
+			videoId: 'Q8gARryJA9g',
+			playerVars: {
+				'autoplay': 1,
+				'rel': 0,
+        	}
+			});
+		}
+		</script>
 	</section>
 
 	<!-- Two -->

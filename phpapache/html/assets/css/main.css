@@ -2618,7 +2618,6 @@ body {
     height: 20%;
     left: 0;
     line-height: 6em;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 50;
@@ -2627,7 +2626,7 @@ body {
 }
 
 #header nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: inherit;
     line-height: inherit;
