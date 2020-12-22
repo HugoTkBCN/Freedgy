@@ -75,7 +75,7 @@
 					</div>
 					<!-- Break -->
 					<div class="12u$">
-						<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+						<textarea name="contactMessage" id="message" placeholder="Enter your message" rows="6"></textarea>
 					</div>
 					<!-- Break -->
 					<div class="12u$">
