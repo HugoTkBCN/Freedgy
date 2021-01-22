@@ -1,0 +1,53 @@
+{
+    "main": {
+        "name": "Freedgy",
+        "description": "For a better world",
+        "logo": "freedgy.png",
+        "contactmessage": "Contact us through this formular",
+        "email": "freedgy-project@gmail.com",
+        "phone": "+34 620 397 972",
+        "address": {
+            "street": "21 Carrer Joan Miro",
+            "city": "Barcelona",
+            "state": "Spain",
+            "zip": "08005"
+        },
+        "website": "https://www.freedgy.com",
+        "social": [
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/hugo-lachkar-56a36314b/",
+                "className": "fa fa-linkedin"
+            },
+            {
+                "name": "instagram",
+                "url": "tets",
+                "className": "fa fa-instagram"
+            }
+        ]
+    },
+    "about": {
+        "devs": [
+            {
+                "name": "Hugo.L",
+                "image": "images/devs/hugo.jpg"
+            },
+            {
+                "name": "Arnaud.R",
+                "image": "images/devs/arnaud.jpg"
+            },
+            {
+                "name": "Corentin.R",
+                "image": "images/devs/corentin"
+            },
+            {
+                "name": "Noé.S",
+                "image": "images/devs/noe"
+            },
+            {
+                "name": "Maxence.D",
+                "image": "images/devs/maxence"
+            }
+        ]
+    }
+}
